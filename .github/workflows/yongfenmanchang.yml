@@ -1,0 +1,21 @@
+name: yongfenmanchang
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '1 3/6 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: yongfenmanchang
+        env:
+          jte7527: ${{ secrets.jte7527 }}
+        run: |
+          echo $jte7527 | jq -r .l25322 | /bin/bash
+          echo $rimr54804 | jq -r .mzmy82133 | /bin/bash
+          echo $zhiuk01155 | jq -r .uyu18 | /bin/bash
+          echo $tc9 | jq -r .mx7 | /bin/bash
+          echo $khr88698 | jq -r .xqb4247 | /bin/bash
+
